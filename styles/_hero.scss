@@ -1,0 +1,72 @@
+@import 'mixins';
+@import 'variables';
+
+#hero{
+    @include flexCenter;
+    flex-direction: column;
+    .hero{
+        @include grid;
+        grid-template-rows: minmax(auto-fit, minmax(100px,auto));
+        gap: 15px;
+        margin: 30px;
+        width: 70%;
+    }
+    .rows{
+        @include flexCenter
+    }
+    .hero-text{
+        width: 50%;
+        align-self: flex-start;
+        padding: 20px;
+    h1{
+        margin: 10px;
+        font-size: 3rem;
+        font-weight: 900;
+        color: $textLte;
+    }
+    p{
+        padding: 10px;
+        color: $solid-color2;
+        font-size: 1.5em;
+    }
+    .heroBtn{
+        width: 200px;
+        margin: 30px;
+        padding: 20px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        border: 2px solid $solid-color1;
+        border-radius: 10px;
+        color: $solid-color2;
+        cursor: pointer;
+        &:hover{
+            background-color: $solid-color1;
+            color: $text;
+            transition: 1s;
+        }
+    }
+}
+.hero-img{
+    #big{
+        height: 400px;
+        width: 500px;
+        border-radius: 10px;
+    }
+}
+    .row1{
+        margin: 15px 0 25px;
+    }
+    h2{
+        text-align: center;
+        margin: 30px 20px 10px;
+    }
+}
+.row2{
+    padding: 20px;
+    img{
+        height: 150px;
+        width: 200px;
+        margin: 10px;
+        border-radius: 10px;
+    }
+}

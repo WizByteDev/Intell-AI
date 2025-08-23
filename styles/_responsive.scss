@@ -1,0 +1,112 @@
+@import 'mixins';
+@import 'variables';
+
+@media (max-width: 700px) {
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+   header{
+    @include grid;
+    width: 100vw;
+    grid-template-columns: repeat(2,1fr);
+   }
+   header{
+    img{
+        align-self: flex-start;
+    }
+    .openMenu{
+        background: none;
+        border: none;
+        color: $solid-color2;
+        display: block;
+    }
+    .navLinks{
+        flex-direction: column;
+        justify-self: end;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: $solid-color2;
+        width: 500px;
+        height: 100vh;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+        z-index: 1000;
+        .closeMenu{
+            background: none;
+            border: none;
+            color: $text;
+            display: block;
+        }
+        li{
+            a{
+                color: $text;
+            }
+        }
+    }
+    .navLinks.active{
+        transform: translateX(0);
+
+    }
+    div{
+        justify-self: end;
+        grid-column: 2/-1;
+    }
+   }
+   .rows{
+    flex-wrap: wrap;
+   }
+   #hero{
+    .hero-text{
+        width: auto;
+        h1{
+            font-size: 1.5rem;
+            margin: 10px 0;
+            text-align: center;
+        }
+        p{
+            font-size: 1rem;
+            padding: 0;
+            text-align: center;
+        }
+        .heroBtn{
+            width: 150px;
+            font-size: 1rem;
+            margin: 20px auto;
+        }
+    }
+    .hero-img{
+        #big{
+            width: 300px;
+        }
+    }
+   }
+   #features{
+    .features-box{
+        grid-template-columns: repeat(auto-fit,(minmax(250px,2fr)));
+        .feature{
+            text-align: center;
+            width: fit-content;
+            margin: 0;
+        }
+    }
+   }
+   .features-display{
+    width: 100%;
+    img{
+        width: 300px;
+    }
+    .fd-text{
+        width: 300px;
+        text-align: center;
+    }
+   }
+    .testimonials{
+        flex-direction: column;
+        .user{
+            width: 300px;
+        }
+    }
+}
+
