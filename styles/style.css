@@ -1,4 +1,24 @@
 @charset "UTF-8";
+.hidden {
+  opacity: 0.5;
+  filter: blur(2px);
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.smaller {
+  transform: scale(0);
+  transition: all 1s;
+}
+
+.normal {
+  transform: scale(1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +34,8 @@ body {
 }
 
 body.lock-scroll {
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -49,7 +71,12 @@ header ul li a {
   color: #140900;
 }
 
-header div {
+header a {
+  text-decoration: none;
+}
+header a div {
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 15px;
   background-color: rgb(37, 20, 20);
   border-radius: 10px;
@@ -57,7 +84,7 @@ header div {
   color: rgba(244, 255, 254, 0.9176470588);
   cursor: pointer;
 }
-header div:hover {
+header a div:hover {
   background: transparent;
   border: 2px solid #140900;
   color: #140900;
@@ -69,6 +96,7 @@ header div:hover {
   color: #140900;
   padding: 3rem 1.5rem 1rem;
   font-family: "Poppins", sans-serif;
+  width: 100%;
 }
 .footer .footer-container {
   display: grid;
@@ -130,6 +158,32 @@ header div:hover {
   font-size: 0.95rem;
   max-width:  250px;
 }
+.footer section {
+  padding: 60px 20px;
+  margin: auto;
+  max-width: 1200px;
+}
+.footer section h2 {
+  text-align: center;
+}
+.footer h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.footer h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.footer p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(17, 14, 14, 0.4784313725);
+}
+
+body {
+  overflow-x: hidden;
+}
 
 ::-webkit-scrollbar {
   opacity: 0.5;
@@ -146,7 +200,7 @@ header div:hover {
   align-items: center;
   justify-content: space-evenly;
   gap: 15px;
-  grid-template-rows: minmax(auto-fit, minmax(100px, auto));
+  grid-template-rows: minmax(100px, auto);
   gap: 15px;
   margin: 30px;
   width: 70%;
@@ -173,15 +227,19 @@ header div:hover {
   font-size: 1.5em;
 }
 #hero .hero-text .heroBtn {
-  width: 200px;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 30px;
   padding: 20px;
   font-size: 1.5rem;
   font-weight: 400;
   border: 2px solid rgb(37, 20, 20);
   border-radius: 10px;
-  color: #140900;
   cursor: pointer;
+}
+#hero .hero-text .heroBtn a {
+  text-decoration: none;
+  color: #140900;
 }
 #hero .hero-text .heroBtn:hover {
   background-color: rgb(37, 20, 20);
@@ -386,16 +444,19 @@ header div:hover {
   justify-content: center;
   justify-content: space-between;
   flex-direction: column;
+  background-color: #fff;
   min-height: 400px;
   width: 250px;
   margin: 20px;
-  padding: 15px;
-  border-radius: 15px;
+  padding: 20px;
+  border-radius: 12px;
   box-shadow: 3px 4px 25px #e7e7e7;
+  transition: transform 0.3s ease;
 }
 .pricing-cards .card:hover {
-  box-shadow: 3px 4px 20px #140900;
-  transition: 0.5s;
+  box-shadow: 0px 4px 12px #140900;
+  transform: translateY(-5px);
+  transition: 0.3s;
 }
 
 .card h5 {
@@ -424,17 +485,19 @@ header div:hover {
 }
 .card button {
   justify-self: flex-end;
-  padding: 15px;
+  padding: 12px 24px;
   background: transparent;
   color: #140900;
   border: 2px solid #140900;
-  border-radius: 10px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 .card button:hover {
   background: #140900;
   color: rgba(244, 255, 254, 0.9176470588);
+  transform: scale(1.05);
   transition: 1s;
 }
 
@@ -467,7 +530,7 @@ header div:hover {
     top: 0;
     right: 0;
     background-color: #140900;
-    width: 500px;
+    width: 300px;
     height: 100vh;
     transform: translateX(100%);
     transition: transform 0.5s ease;
@@ -539,40 +602,6 @@ header div:hover {
     width: 300px;
   }
 }
-.hidden {
-  opacity: 0.5;
-  filter: blur(2px);
-  transition: all 1.5s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-}
-
-.right {
-  transform: translateX(0);
-  transition: all 2s;
-}
-
-.left {
-  transform: translateX(0);
-  transition: all 2s;
-}
-
-.moveRight {
-  transform: translateX(200px);
-}
-
-.moveLeft {
-  transform: translateX(-200px);
-}
-
-.smaller {
-  transform: scale(0);
-  transition: all 2s;
-}
-
-.normal {
-  transform: scale(1);
+body {
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */

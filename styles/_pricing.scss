@@ -25,15 +25,18 @@
         @include flexCenter;
         justify-content: space-between;
         flex-direction: column;
+        background-color: $Pwhite;
         min-height: 400px;
         width: 250px;
         margin: 20px;
-        padding: 15px;
-        border-radius: 15px;
+        padding: 20px;
+        border-radius: 12px;
         box-shadow: $shadow1;
+        transition: transform 0.3s ease;
         &:hover{
             box-shadow: $shadow2;
-            transition: 0.5s;
+            transform: translateY(-5px);
+            transition: 0.3s;
         }
     }
 }
@@ -67,16 +70,18 @@
     }
     button{
         justify-self: flex-end;
-        padding: 15px;
+        padding: 12px 24px;
         background: transparent;
         color: $solid-color2;
         border: 2px solid $solid-color2;
-        border-radius: 10px;
-        font-weight: bold;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
         cursor: pointer;
         &:hover{
         background: $solid-color2;
         color: $text;
+        transform: scale(1.05);
         transition: 1s;
         }
     }
