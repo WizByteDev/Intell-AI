@@ -5,12 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-}
-body{
+ }
+html,body{
     height: 100vh;
     width: 100%;
     position: relative;
-    overflow-x: hidden;
 }
 body.lock-scroll{
   height: 100vh;
@@ -18,7 +17,7 @@ body.lock-scroll{
   overflow: hidden;
 }
 header{
-  width: 100%;
+  width: 100vw;
    @include flexCenter;
    justify-content: space-between;
     padding: 10px;
@@ -31,6 +30,7 @@ header{
       height: 50px;
       width: 50px;
       border-radius: 30px;
+      margin: 10px;
     }
     ul{
     display: flex;
@@ -66,14 +66,15 @@ header{
         }
     }
   }
-    
 }
-.footer {
-  background: $solid-light;
-  color: $solid-color2;
+main{
+  width: 100%;
+}
+  footer {
+  background: #969696;
+  color: #fff;
   padding: 3rem 1.5rem 1rem;
   font-family: "Poppins", sans-serif;
-  width: 100%;
 
   .footer-container {
     display: grid;
@@ -86,10 +87,10 @@ header{
       h4 {
         margin-bottom: 1rem;
         font-size: 1.2rem;
-        color: $solid-color1;
+        color: #38bdf8;
       }
 
-      ul{
+      ul {
         list-style: none;
         padding: 0;
 
@@ -97,12 +98,12 @@ header{
           margin: 0.5rem 0;
 
           a {
-            color: $solid-color1;
+            color: #cbd5e1;
             text-decoration: none;
             transition: color 0.3s;
 
             &:hover {
-              color: $solid-color2;
+              color: #38bdf8;
             }
           }
         }
@@ -117,7 +118,7 @@ header{
 
         a {
           margin-right: 1rem;
-          color: #0a3344;
+          color: #38bdf8;
           text-decoration: none;
           transition: color 0.3s;
 
@@ -135,47 +136,27 @@ header{
     font-size: 0.9rem;
     border-top: 1px solid #1e293b;
     padding-top: 1rem;
-    color: #fff;
+    color: #cecece;
   }
 
   .footer-logo {
-    width: 120px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
     margin-bottom: 1rem;
-    border-radius: 20px;
   }
 
   .footer-desc {
-    color: #94a3b8;
+    color: #cde2ff;
     font-size: 0.95rem;
-    max-width: 250px;
+    max-width: 250px;
 }
-section{
-  padding: 60px 20px;
-  margin: auto;
-  max-width: 1200px;
-  h2{
-    text-align: center;
-  }
+
 }
-h1{
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-h2{
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-p{
-  font-size: 1rem;
-  line-height: 1.6;
-  color: $textLte;
-}
-}
-body{
+html,body{
   overflow-x: hidden;
 }
 ::-webkit-scrollbar{
-  opacity: 0.5;  
+  display: none;
 }
 
