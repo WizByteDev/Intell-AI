@@ -40,11 +40,17 @@
         .closeMenu{
             background: none;
             border: none;
+            margin: 0 13px;
             color: $text;
             display: block;
             font-size: 1.8rem;
         }
         li{
+            width: 80%;
+            border-bottom: 1px solid $solid-light;  
+            &:last-child{
+                border-bottom: none
+            }  
             a{
                 color: $text;
             }
@@ -102,6 +108,9 @@
     }
    }
    .features-display{
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
     width: 100%;
     img{
         width: 300px;
@@ -119,6 +128,9 @@
         }
     }
     .pricing-cards{
+        flex-direction: column;
+        align-self: center;
+        justify-content: space-between;
         .card{
             margin: 10px;
         }

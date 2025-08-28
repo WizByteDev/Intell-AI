@@ -544,9 +544,17 @@ html, body {
   header .navLinks .closeMenu {
     background: none;
     border: none;
+    margin: 0 13px;
     color: rgba(244, 255, 254, 0.9176470588);
     display: block;
     font-size: 1.8rem;
+  }
+  header .navLinks li {
+    width: 80%;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  header .navLinks li:last-child {
+    border-bottom: none;
   }
   header .navLinks li a {
     color: rgba(244, 255, 254, 0.9176470588);
@@ -596,6 +604,9 @@ html, body {
     margin: 10px 0;
   }
   .features-display {
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
     width: 100%;
   }
   .features-display img {
@@ -611,6 +622,11 @@ html, body {
   .testimonials .user {
     width: 300px;
     margin: 10px 0;
+  }
+  .pricing-cards {
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between;
   }
   .pricing-cards .card {
     margin: 10px;
